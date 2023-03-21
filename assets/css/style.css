@@ -338,6 +338,23 @@ h6 {
   display: block;
 }
 
+
+/* section-headre */
+
+.container__header{
+  overflow-x: hidden;
+  position: relative;
+  height: 100px;
+}
+
+.color-text{
+  display:none;
+}
+
+.parent{
+  height: 100px!important;
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/

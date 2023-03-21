@@ -33,10 +33,12 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <!-- swiper link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
 <body>
-
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex justify-content-between">
@@ -97,7 +99,112 @@
 
     </div>
   </section><!-- End Hero Section -->
+  <!-- header market -->
+  <section id="section-header">
+    <div class="container__header mySwiper">
+      <div class="swiper-wrapper parent">
 
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>......</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+
+        <div class="child swiper-slide">
+          <span><a href="#"><b>.........</b></a></span>
+          <span>market</span>
+          <span>market</span>
+          <span>market</span>
+        </div>
+        
+      </div>
+      <div class="autoplay-progress color-text">
+      <svg viewBox="0 0 48 48">
+      </svg>
+      <span></span>
+    </div>
+    </div>
+  </section>
   <main id="main">
 
     <!-- ======= About Section ======= -->
@@ -845,6 +952,35 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- swiper script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
